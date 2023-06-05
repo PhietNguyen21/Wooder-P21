@@ -1,0 +1,31 @@
+.Popup_video {
+    .modal {
+        .modal-dialog {
+
+            .modal-content {
+                background-color: transparent;
+                border: none;
+                button {
+                    position: absolute;
+                    top:-3%;
+                    right: -10px;
+                    z-index: 10;
+                    width: fit-content;
+                    margin-left: auto;
+                    background-color: $text-color-bea-0;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 100%;
+                    line-height: 20px;
+                    &:focus{
+                        outline: none;
+                    }
+                    span {
+                        color: $bg-color-black-0;
+                       
+                    }
+                }
+            }
+        }
+    }
+}

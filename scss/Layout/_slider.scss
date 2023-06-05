@@ -1,0 +1,166 @@
+.Slider {
+    position: relative;
+    .swiper {
+        width: 100%;
+        height: 100%;
+
+        .swiper-wrapper {
+            .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                // background: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: $text-color-bea-0;
+            top: 95%;
+            border: 2px solid $text-color-bea-0;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+           
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-size: 15px;
+            font-weight: bold;
+            position: relative;
+            z-index: 10;
+        }
+        .swiper-button-next:focus,
+        .swiper-button-prev:focus {
+            outline: none;
+        }
+
+        .swiper-button-prev {
+            right: var(--swiper-navigation-sides-offset, 70px);
+            left: auto;
+        }
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        position: absolute;
+        bottom: 2.5%;
+        left: 10%;
+        width: fit-content;
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        background-color: $text-color-white-0;
+    }
+
+    .number {
+        position: absolute;
+        font-size: $font-size-2 - 1.5rem;
+        color: $text-color-bea-0;
+        font-weight: bold;
+        bottom: 0;
+        left: 6%;
+        z-index: 6;
+
+        &::after {
+            content: "";
+            width: 40px;
+            height: 2px;
+            background-color: $text-color-bea-0;
+            position: absolute;
+            right: 115%;
+            bottom: 50%;
+        }
+    }
+
+    .Slider_title {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        z-index: 10;
+        transform: translateX(-50%);
+        text-align: center;
+        h2 {
+            font-size: $font-size-2;
+            color: $text-color-bea-0;
+            text-transform: uppercase;
+            letter-spacing: 15px;
+            font-weight: $font-weight-bold;
+            padding-bottom: $pd-4 + 5px;
+            // animation: rightToLeft 1.1s infinite ease;
+        }
+    }
+    .Slider_bottom {
+        width: fit-content;
+        position: absolute;
+        bottom: 3%;
+        left: 50%;
+
+        z-index: 100;
+        .item_img {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            .arrow {
+                width: 8px;
+                animation: move 1.1s infinite ease-in-out;
+            }
+        }
+    }
+}
+
+// hieu ung cua arrow down
+@keyframes move {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(25px);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+// hieu ung cua h2 Title di phai qua trai
+@keyframes rightToLeft {
+    0% {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+// Hieu ung button di tu trai qua phai
+
+@keyframes leftToRight {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+// @keyframes animateNextPrev {
+//     0% {
+//         transform: translateX(0);
+//     }
+//     50% {
+//         transform: translateX(100%);
+//     }
+// }

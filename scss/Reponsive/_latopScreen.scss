@@ -1,0 +1,125 @@
+@media only screen and (min-width: 916px) and (max-width: 1180px) {
+    header {
+        .header_item {
+            // .Logo {
+            //     a {
+            //         img {
+            //             width: 150px;
+            //         }
+            //     }
+            // }
+            .header_content {
+                ul {
+                    li {
+                        padding: 0 20px;
+                        a {
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+                .activeHeader {
+                    padding: 0 20px;
+                    a {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+            .header_language {
+                .language {
+                    span {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+    // button ani
+    .btn-animation {
+        padding: 10px 20px;
+        span {
+            font-size: 0.8rem;
+        }
+        img {
+            // margin-left: 5px;
+            width: 20px;
+        }
+    }
+
+    // List Dots
+    .Slider .swiper-horizontal > .swiper-pagination-bullets,
+    .Slider .swiper-pagination-bullets.swiper-pagination-horizontal {
+        left: 12%;
+    }
+    .Slider {
+        .Slider_title {
+            h2 {
+                font-size: 3rem;
+            }
+        }
+        .swiper {
+            .swiper-button-next,
+            .swiper-button-prev {
+                top: 95%;
+            }
+        }
+    }
+
+    // PRODUCT
+    .Product {
+        .product_left{
+            .title_content_left{
+                h2{
+                    font-size: 2rem;
+                }
+            }
+        }
+        .product_bottom_right {
+            .title_content_right {
+                padding: 80px 88px 0 0;
+                h2{
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    // BTN ANIMATE
+
+    .btn_details{
+        button{
+            font-size: 14px;
+            letter-spacing: 0;
+            margin-right: 0;
+            img{
+                width: 20px;
+            }
+        }
+    }
+    // ABOUT
+    .About {
+        .about-content {
+            .grid-item2 {
+                .title_content_left {
+                    padding: 80px 10px 0 0px;
+                    p {
+                        display: -webkit-inline-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                    h2::before{
+                        display: none;
+                    }
+
+                    .btn_details{
+                        button{
+                            letter-spacing: 0;
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

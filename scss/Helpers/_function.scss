@@ -1,0 +1,28 @@
+@each $stt in(1,2,3) {
+    .Slider{
+        .swiper-wrapper{
+            #slider-#{$stt} {
+                background: url("../img1/img/slide#{$stt}.jpg");
+                background-position: center;
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                height: 714px;
+            }
+        }
+    }
+}
+
+// Reponsive Table Slider
+// @each $stt in(1,2,3){
+//     .Slider{
+//         .swiper-wrapper{
+//             #slider-#{$stt}{
+//                 background: url("../../assets/img/slide#{$stt}.jpg");
+//                 background-position: center;
+//                 background-size: 100% 100%;
+//                 background-repeat: no-repeat;
+//                 height: 714px;
+//             }
+//         }
+//     }
+// }

@@ -1,0 +1,69 @@
+.btn-animation {
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    @include buttonSet($text-color-white-0, transparent, $text-color-white-0, $text-color-white-0);
+    &::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: $text-color-bea-0;
+        top: 0;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform 1.1s;
+    }
+    &:hover::after {
+        transform-origin: left;
+        transform: scaleX(1);
+        transition: transform 1.1s;
+        z-index: 1;
+        // animation: backGroundMove 1s infinite ease-in-out;
+    }
+
+    &:hover {
+        span {
+            color: $text-color-black-0;
+        }
+    }
+
+    span {
+        position: relative;
+        z-index: 10;
+        font-weight: bold;
+    }
+    img {
+        position: relative;
+        z-index: 10;
+    }
+}
+
+
+.button.active{
+    @include buttonSet($text-color-bea-0,$text-color-bea-0,$bg-color-black-1,none);
+    color: $text-color-white-0;
+}
+
+.button{
+    @include buttonSet(none,transparent,none,none);
+    border: none;
+    
+    &:focus{
+        outline: none;
+       
+    }
+}
+
+// @keyframes backGroundMove{
+//     0%{
+//         transform: translateX(0);
+//     }50%{
+//         transform: translateX(100%);
+
+//     }100%{
+//         transform: translateX(200%);
+
+//     }
+// }
